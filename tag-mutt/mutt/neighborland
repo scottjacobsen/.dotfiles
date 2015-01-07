@@ -1,0 +1,3 @@
+set postponed = "+neighborland/[Gmail].Drafts"
+set from = "scott@neighborland.com"
+color status green default

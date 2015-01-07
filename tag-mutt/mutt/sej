@@ -1,0 +1,5 @@
+set postponed = "+scottericjacobsen/[Gmail].Drafts"
+set from = "jacobsenscott@yahoo.com"
+set copy = yes
+set record = "+scottericjacobsen/[Gmail].Sent Mail"
+color status yellow default

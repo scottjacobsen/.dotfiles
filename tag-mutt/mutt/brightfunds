@@ -1,0 +1,3 @@
+set postponed = "+brightfunds/[Gmail].Drafts"
+set from = "scott@brightfunds.org"
+color status cyan default

@@ -1,0 +1,45 @@
+# -*- mode: conf; -*-
+set realname = "Scott Jacobsen"
+set mbox_type = Maildir
+set folder = "~/Maildir"
+source ~/.mutt/muttrc.mailboxes
+set spoolfile = "+scottericjacobsen/INBOX"
+set postponed = "+scottericjacobsen/[Gmail].Drafts"
+set from = "jacobsenscott@yahoo.com"
+# set use_envelope_from = yes
+set sendmail = "/usr/local/bin/msmtp"
+set use_envelope_from = yes
+alternates ^scottericjacobsen@gmail.com$|^jacobsenscott@yahoo.com$|^scott@brightfunds.org$|^scott@neighborland.com$
+set copy = no
+
+lists ^clean-code-discussion@googlegroups.com$|^emacs-devel-request@gnu.org$
+subscribe ^clean-code-discussion@googlegroups.com$|^emacs-devel-request@gnu.org$
+
+set editor = "emacsclient -t"
+set sort = 'threads'
+# set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+hdr_order Date From To Cc
+alternative_order text/plain text/html *
+auto_view text/html
+
+#draconian header ignores
+ignore *
+unignore from date subject to cc
+unignore organization organisation x-mailer: x-newsreader: x-mailing-list:
+unignore posted-to:
+unhdr_order *
+hdr_order Subject: From: Date: To:
+
+color header green default subject
+color header yellow default from
+color signature yellow default
+
+folder-hook scottericjacobsen/* source ~/.mutt/sej
+folder-hook neighborland/* source ~/.mutt/neighborland
+folder-hook brightfunds/* source ~/.mutt/brightfunds
+
+my_hdr X-Eric-Conspiracy: There is no conspiracy.
+
+set alias_file = ~/.mutt/aliases
+source ~/.mutt/aliases
