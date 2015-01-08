@@ -4,7 +4,7 @@ import sys
 
 def mailpasswd(gpg_file):
   path = "%s/.passwords/%s" % (os.getenv("HOME"), gpg_file)
-  args = ["gpg2", "--quiet", "--batch", "--no-tty", "--decrypt", path]
+  args = ["gpg", "--quiet", "--batch", "--no-tty", "--decrypt", path]
   try:
     return subprocess.check_output(args).strip()
   except subprocess.CalledProcessError:
