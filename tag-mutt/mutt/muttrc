@@ -31,8 +31,8 @@ unignore posted-to:
 unhdr_order *
 hdr_order Subject: From: Date: To:
 
-color header green default subject
-color header yellow default from
+color header yellow default subject
+color header red default from
 color signature yellow default
 
 folder-hook scottericjacobsen/* source ~/.mutt/sej
