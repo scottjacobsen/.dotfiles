@@ -23,6 +23,7 @@ quick = 5
 [Repository local-scottericjacobsen]
 type = GmailMaildir
 localfolders = ~/Maildir/scottericjacobsen
+nametrans = nametrans_local
 
 [Repository remote-scottericjacobsen]
 type = Gmail
@@ -30,7 +31,8 @@ remoteuser = scottericjacobsen@gmail.com
 remotepasseval = mailpasswd("scottericjacobsen.gmail.com.gpg")
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 maxconnections = 3
-folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail', '[Gmail]/Spam', '[Gmail]/Trash']
+folderfilter = folder_filter
+nametrans = nametrans_remote
 
 ######### NEIGHBORLAND ####################
 [Account neighborland]
@@ -45,6 +47,7 @@ quick = 5
 [Repository local-neighborland]
 type = GmailMaildir
 localfolders = ~/Maildir/neighborland
+nametrans = nametrans_local
 
 [Repository remote-neighborland]
 type = Gmail
@@ -52,7 +55,8 @@ remoteuser = scott@neighborland.com
 remotepasseval = mailpasswd("scott.neighborland.com.gpg")
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 maxconnections = 3
-folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail', '[Gmail]/Spam', '[Gmail]/Trash']
+folderfilter = folder_filter
+nametrans = nametrans_remote
 
 ######### BRIGHTFUNDS ####################
 [Account brightfunds]
@@ -67,6 +71,7 @@ quick = 5
 [Repository local-brightfunds]
 type = GmailMaildir
 localfolders = ~/Maildir/brightfunds
+nametrans = nametrans_local
 
 [Repository remote-brightfunds]
 type = Gmail
@@ -74,7 +79,8 @@ remoteuser = scott@brightfunds.org
 remotepasseval = mailpasswd("scott.brightfunds.org.gpg")
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 maxconnections = 3
-folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail', '[Gmail]/Spam', '[Gmail]/Trash']
+folderfilter = folder_filter
+nametrans = nametrans_remote
 
 [mbnames]
 enabled = yes

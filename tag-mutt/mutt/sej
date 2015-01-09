@@ -1,4 +1,4 @@
-set postponed = "+scottericjacobsen/[Gmail].Drafts"
+set postponed = "+scottericjacobsen/drafts"
 set from = "jacobsenscott@yahoo.com"
 set copy = yes
 set record = "+scottericjacobsen/[Gmail].Sent Mail"

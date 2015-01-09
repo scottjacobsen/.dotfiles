@@ -3,8 +3,8 @@ set realname = "Scott Jacobsen"
 set mbox_type = Maildir
 set folder = "~/Maildir"
 source ~/.mutt/muttrc.mailboxes
-set spoolfile = "+scottericjacobsen/INBOX"
-set postponed = "+scottericjacobsen/[Gmail].Drafts"
+set spoolfile = "+scottericjacobsen/inbox"
+set postponed = "+scottericjacobsen/drafts"
 set from = "jacobsenscott@yahoo.com"
 # set use_envelope_from = yes
 set sendmail = "/usr/local/bin/msmtp"
