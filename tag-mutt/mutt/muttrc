@@ -25,9 +25,7 @@ auto_view text/html
 
 #draconian header ignores
 ignore *
-unignore from date subject to cc
-unignore organization organisation x-mailer: x-newsreader: x-mailing-list:
-unignore posted-to:
+unignore from date subject to cc organization organisation x-mailer x-newsreader x-mailing-list posted-to X-Keywords X-Eric-Conspiracy
 unhdr_order *
 hdr_order Subject: From: Date: To:
 
