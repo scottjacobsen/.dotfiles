@@ -42,3 +42,4 @@ my_hdr X-Eric-Conspiracy: There is no conspiracy.
 set alias_file = ~/.mutt/aliases
 source ~/.mutt/aliases
 set crypt_use_gpgme=yes
+set confirmappend=no

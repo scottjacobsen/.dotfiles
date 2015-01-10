@@ -1,5 +1,11 @@
 set postponed = "+scottericjacobsen/drafts"
 set from = "jacobsenscott@yahoo.com"
 set copy = yes
-set record = "+scottericjacobsen/[Gmail].Sent Mail"
+set record = "+scottericjacobsen/sent"
 color status yellow default
+
+macro index,pager "#" "<save-message>+scottericjacobsen/trash<enter>" \
+    "move message to the trash"
+
+macro index,pager S "<save-message>+scottericjacobsen/spam<enter>"  \
+        "mark message as spam"
