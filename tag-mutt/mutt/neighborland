@@ -1,3 +1,4 @@
+# -*- mode: conf; -*-
 set postponed = "+neighborland/drafts"
 set from = "scott@neighborland.com"
 color status green default
@@ -8,3 +9,5 @@ macro index,pager "#" "<save-message>+neighborland/trash<enter>" \
 
 macro index,pager S "<save-message>+neighborland/spam<enter>"  \
         "mark message as spam"
+
+macro index "<esc><tab>" "<change-folder>+brightfunds/inbox<enter>" "To brightfunds"
