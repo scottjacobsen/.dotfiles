@@ -1,0 +1,35 @@
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  tst = status
+  tpush = push
+  diff = diff --word-diff=color
+
+[user]
+  name = Scott Jacobsen
+	email = jacobsenscott@yahoo.com
+
+[color]
+  ui = auto
+
+[core]
+  whitespace = -trailing-space
+  excludesfile = ~/.gitignore_global
+
+[push]
+  default = upstream
+
+[branch]
+  autosetuprebase = always
+
+[log]
+  decorate = short
+[merge]
+	tool = emerge
+	conflictstyle = diff3
+[help]
+	autocorrect = 1
+[rebase]
+	autosquash = true
