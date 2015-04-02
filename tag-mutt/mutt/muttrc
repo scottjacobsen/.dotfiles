@@ -43,3 +43,5 @@ set alias_file = ~/.mutt/aliases
 source ~/.mutt/aliases
 set crypt_use_gpgme=yes
 set confirmappend=no
+macro index "<esc>>" "<last-entry>"
+macro index "<esc><" "<first-entry>"
