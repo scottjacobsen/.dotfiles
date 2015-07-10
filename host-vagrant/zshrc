@@ -1,0 +1,80 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+unsetopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename "$HOME/.zshrc"
+
+autoload -Uz compinit
+autoload -Uz zcalc
+autoload -Uz tetris
+autoload -Uz zargs
+compinit
+# End of lines added by compinstall
+autoload colors
+
+colors
+
+if [[ $USER == 'root' ]]; then
+    PS1="%{${fg[red]}%}%n@%m %~%#%{${fg[default]}%} "
+    RPS1="%{${fg[red]}%}%W %T%{${fg[default]}%}"
+else
+    PS1="%{${fg[yellow]}%}%n@%m %~%#%{${fg[default]}%} "
+    RPS1="%{${fg[blue]}%}%W %T%{${fg[default]}%}"
+fi
+
+setopt prompt_subst
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' actionformats \
+    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+zstyle ':vcs_info:*' formats       \
+    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+
+zstyle ':vcs_info:*' enable git hg
+
+# or use pre_cmd, see man zshcontrib
+vcs_info_wrapper() {
+  vcs_info
+  if [ -n "$vcs_info_msg_0_" ]; then
+    echo "%{$fg[grey]%}${vcs_info_msg_0_}%{$reset_color%}$del"
+  fi
+}
+
+RPROMPT=$'$(vcs_info_wrapper)'
+
+unsetopt bg_nice hup notify hist_beep check_jobs
+setopt inc_append_history share_history extended_history hist_ignore_dups auto_cd cd_able_vars correct auto_menu auto_pushd long_list_jobs extendedglob
+
+alias ec=emacsclient
+alias grep="grep --color"
+alias -s rb="emacsclient -n"
+alias bc="bundle check || bundle"
+alias gi=git
+export WORDCHARS=''
+zstyle ':completion:*:*:*:*' menu search
+
+eval `keychain --eval --agents gpg`
+
+unset RUBYOPT
+[[ $EMACS = t ]] && unsetopt zle
+export EDITOR="emacsclient"
+export ALTERNATE_EDITOR=""
+export RUBY_GC_MALLOC_LIMIT=60000000
+export RUBY_FREE_MIN=200000
+export PGHOST=localhost
+
+PATH=$HOME/bin:$HOME/.cask/bin:/usr/local/bin:/usr/local/sbin:$PATH
+
+unset RUBY_FREE_MIN
+
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+export PATH=$PATH:`npm bin`
+
+GPG_TTY=`tty`
+export GPG_TTY
