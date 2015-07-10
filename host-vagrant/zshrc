@@ -53,7 +53,9 @@ alias ec=emacsclient
 alias grep="grep --color"
 alias -s rb="emacsclient -n"
 alias bc="bundle check || bundle"
+
 alias gi=git
+
 export WORDCHARS=''
 zstyle ':completion:*:*:*:*' menu search
 
@@ -63,9 +65,10 @@ unset RUBYOPT
 [[ $EMACS = t ]] && unsetopt zle
 export EDITOR="emacsclient"
 export ALTERNATE_EDITOR=""
+export DEPLOY=staging
 export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000
 export PGHOST=localhost
+export PGUSER=vagrant
 
 PATH=$HOME/bin:$HOME/.cask/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
@@ -74,7 +77,10 @@ unset RUBY_FREE_MIN
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+compdef -d rake
 export PATH=$PATH:`npm bin`
 
 GPG_TTY=`tty`
 export GPG_TTY
+
+export SPRING_TMP_PATH=/tmp
