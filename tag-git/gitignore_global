@@ -21,3 +21,5 @@ coverage/
 .*.tags.tmp
 .jshintrc
 .vagrant/
+.~lock.*#
+*.xlsx
