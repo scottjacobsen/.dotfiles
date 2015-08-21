@@ -84,3 +84,4 @@ GPG_TTY=`tty`
 export GPG_TTY
 
 export SPRING_TMP_PATH=/tmp
+REPORTTIME=2
