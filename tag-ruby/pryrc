@@ -25,3 +25,5 @@ begin
   }
 rescue LoadError
 end
+
+ActiveRecord::Base.logger = Logger.new STDOUT if defined?(ActiveRecord)
