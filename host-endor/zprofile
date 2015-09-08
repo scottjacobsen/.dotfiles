@@ -1,1 +1,1 @@
-[[ -f /scripts/bin/neighbor ]] && eval "$(/scripts/bin/neighbor init -)"
+[[ -f ~/dev/scripts/bin/neighbor ]] && eval "$(~/dev/scripts/bin/neighbor init -)"
