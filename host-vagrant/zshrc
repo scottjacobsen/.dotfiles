@@ -59,7 +59,7 @@ alias gi=git
 export WORDCHARS=''
 zstyle ':completion:*:*:*:*' menu search
 
-eval `keychain --eval --agents gpg`
+[[ -f /usr/bin/keychain ]] && eval `keychain --eval --agents gpg`
 
 unset RUBYOPT
 [[ $EMACS = t ]] && unsetopt zle
