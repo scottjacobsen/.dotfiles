@@ -3,7 +3,7 @@
 # get started fast.
 
 [general]
-accounts = scottericjacobsen, brightfunds, neighborland
+accounts = scottericjacobsen, neighborland
 socktimeout = 60
 fsync = false
 maxsyncaccounts = 3
@@ -53,30 +53,6 @@ nametrans = nametrans_local
 type = Gmail
 remoteuser = scott@neighborland.com
 remotepasseval = mailpasswd("scott.neighborland.com.gpg")
-sslcacertfile = /usr/local/etc/openssl/cert.pem
-maxconnections = 3
-folderfilter = folder_filter
-nametrans = nametrans_remote
-
-######### BRIGHTFUNDS ####################
-[Account brightfunds]
-localrepository = local-brightfunds
-remoterepository = remote-brightfunds
-synclabels = yes
-maxconnections = 3
-labelsheader = X-Keywords
-autorefresh = 10
-quick = 5
-
-[Repository local-brightfunds]
-type = GmailMaildir
-localfolders = ~/Maildir/brightfunds
-nametrans = nametrans_local
-
-[Repository remote-brightfunds]
-type = Gmail
-remoteuser = scott@brightfunds.org
-remotepasseval = mailpasswd("scott.brightfunds.org.gpg")
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 maxconnections = 3
 folderfilter = folder_filter
