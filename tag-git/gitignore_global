@@ -8,7 +8,9 @@
 .DS_Store
 ._capture.png
 .agignore
+.bash_history
 .bundle
+.byebug_history
 .emacs.desktop
 .emacs.desktop.lock
 .envrc
@@ -17,8 +19,10 @@
 .jshintrc
 .loadpath
 .nfs.*
+.passenger
 .powenv
 .project
+.pry_history
 .rbenv-version
 .rubocop.yml
 .vagrant/
