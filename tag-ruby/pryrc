@@ -1,4 +1,15 @@
 # -*- mode: ruby; -*-
+
+def _require gem
+  require gem
+rescue LoadError
+end
+
+_require "byebug"
+_require "pry-byebug"
+_require "pry-stack_explorer"
+_require "pry-doc"
+
 Pry.commands.alias_command "c", "continue"
 Pry.commands.alias_command "s", "step"
 Pry.commands.alias_command "n", "next"
@@ -25,5 +36,3 @@ begin
   }
 rescue LoadError
 end
-
-ActiveRecord::Base.logger = Logger.new STDOUT if defined?(ActiveRecord)
