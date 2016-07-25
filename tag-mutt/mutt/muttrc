@@ -6,6 +6,7 @@ source ~/.mutt/muttrc.mailboxes
 set spoolfile = "+scottericjacobsen/inbox"
 set postponed = "+scottericjacobsen/drafts"
 set from = "jacobsenscott@yahoo.com"
+set mime_forward = ask-no
 # set use_envelope_from = yes
 set sendmail = "/usr/local/bin/msmtp"
 set use_envelope_from = yes
@@ -37,8 +38,6 @@ source ~/.mutt/mutt-colors-solarized-dark-16.muttrc
 
 folder-hook scottericjacobsen/* source ~/.mutt/sej
 folder-hook neighborland/* source ~/.mutt/neighborland
-
-my_hdr X-Eric-Conspiracy: There is no conspiracy.
 
 set alias_file = ~/.mutt/aliases
 source ~/.mutt/aliases
