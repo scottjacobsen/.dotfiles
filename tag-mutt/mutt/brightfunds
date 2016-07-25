@@ -1,0 +1,13 @@
+# -*- mode: conf; -*-
+set postponed = "+brightfunds/drafts"
+set from = "scott@brightfunds.org"
+color status cyan default
+unset record
+
+macro index,pager "#" "<save-message>+brightfunds/trash<enter>" \
+    "move message to the trash"
+
+macro index,pager S "<save-message>+brightfunds/spam<enter>"  \
+        "mark message as spam"
+
+macro index "<esc><tab>" "<change-folder>+scottericjacobsen/inbox<enter>" "To brightfunds"

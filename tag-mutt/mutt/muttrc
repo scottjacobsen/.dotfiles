@@ -10,7 +10,7 @@ set mime_forward = ask-no
 # set use_envelope_from = yes
 set sendmail = "/usr/local/bin/msmtp"
 set use_envelope_from = yes
-alternates ^scottericjacobsen@gmail.com$|^jacobsenscott@yahoo.com$|^scott@neighborland.com$
+alternates ^scottericjacobsen@gmail.com$|^jacobsenscott@yahoo.com$|^scott@brightfunds.org$|^scott@neighborland.com$
 set copy = no
 
 lists ^clean-code-discussion@googlegroups.com$|^emacs-devel-request@gnu.org$
@@ -38,6 +38,7 @@ source ~/.mutt/mutt-colors-solarized-dark-16.muttrc
 
 folder-hook scottericjacobsen/* source ~/.mutt/sej
 folder-hook neighborland/* source ~/.mutt/neighborland
+folder-hook brightfunds/* source ~/.mutt/brightfunds
 
 set alias_file = ~/.mutt/aliases
 source ~/.mutt/aliases
