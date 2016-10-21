@@ -1,0 +1,16 @@
+# Usage: use ruby <version>
+#
+# Loads the specified ruby version into the environent
+#
+use_ruby() {
+  source /usr/local/share/chruby/chruby.sh
+  local ver=$1
+  if [[ -z $ver ]] && [[ -f .ruby-version ]]; then
+    ver=$(cat .ruby-version)
+  fi
+  if [[ -z $ver ]]; then
+    echo Unknown ruby version
+    exit 1
+  fi
+  chruby $ver
+}

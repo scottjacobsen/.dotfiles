@@ -34,6 +34,7 @@ TAGS
 \#*\#
 capture.png
 coverage/
+docker-compose.yml
 oauth2_test.rb
 page-speed
 routes.txt

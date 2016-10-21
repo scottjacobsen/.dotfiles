@@ -46,3 +46,8 @@ set crypt_use_gpgme=yes
 set confirmappend=no
 macro index "<esc>>" "<last-entry>"
 macro index "<esc><" "<first-entry>"
+
+# Mu
+# first macro does the search according to user query, second macro jumps to result list
+macro index <F8> "<shell-escape>mu find --format=links --linksdir=.mu/results --clearlinks " "mu-find"
+macro index <F9> "<change-folder-readonly>~/.mu/results\n" "display mu-find results"

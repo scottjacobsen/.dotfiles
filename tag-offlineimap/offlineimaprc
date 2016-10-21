@@ -19,6 +19,7 @@ labelsheader = X-Keywords
 maxconnections = 3
 autorefresh = 10
 quick = 5
+status_backend = sqlite
 
 [Repository local-scottericjacobsen]
 type = GmailMaildir
@@ -33,6 +34,7 @@ sslcacertfile = /usr/local/etc/openssl/cert.pem
 maxconnections = 3
 folderfilter = folder_filter
 nametrans = nametrans_remote
+auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
 
 ######### NEIGHBORLAND ####################
 [Account neighborland]
@@ -43,6 +45,7 @@ maxconnections = 3
 labelsheader = X-Keywords
 autorefresh = 10
 quick = 5
+status_backend = sqlite
 
 [Repository local-neighborland]
 type = GmailMaildir
@@ -57,6 +60,7 @@ sslcacertfile = /usr/local/etc/openssl/cert.pem
 maxconnections = 3
 folderfilter = folder_filter
 nametrans = nametrans_remote
+auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
 
 ######### BRIGHTFUNDS ####################
 [Account brightfunds]
@@ -67,6 +71,7 @@ maxconnections = 3
 labelsheader = X-Keywords
 autorefresh = 10
 quick = 5
+status_backend = sqlite
 
 [Repository local-brightfunds]
 type = GmailMaildir
@@ -81,6 +86,7 @@ sslcacertfile = /usr/local/etc/openssl/cert.pem
 maxconnections = 3
 folderfilter = folder_filter
 nametrans = nametrans_remote
+auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
 
 [mbnames]
 enabled = yes
