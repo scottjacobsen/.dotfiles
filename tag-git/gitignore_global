@@ -40,3 +40,4 @@ page-speed
 routes.txt
 tag.sh
 vendor/ruby
+playbook.retry
