@@ -59,7 +59,7 @@ alias gi=git
 export WORDCHARS=''
 zstyle ':completion:*:*:*:*' menu search
 
-[[ -f /usr/bin/keychain ]] && eval `keychain --eval --agents gpg`
+[[ -f /usr/bin/keychain ]] && eval `keychain --eval`
 
 unset RUBYOPT
 [[ $EMACS = t ]] && unsetopt zle
@@ -85,4 +85,3 @@ export GPG_TTY
 
 export SPRING_TMP_PATH=/tmp
 REPORTTIME=2
-export PORT=3001
