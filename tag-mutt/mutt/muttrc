@@ -12,7 +12,7 @@ set sendmail = "/usr/local/bin/msmtp"
 set use_envelope_from = yes
 alternates ^scottericjacobsen@gmail.com$|^jacobsenscott@yahoo.com$|^scott@brightfunds.org$|^scott@neighborland.com$
 set copy = no
-
+set pager_index_lines = 10
 lists ^clean-code-discussion@googlegroups.com$|^emacs-devel-request@gnu.org$
 subscribe ^clean-code-discussion@googlegroups.com$|^emacs-devel-request@gnu.org$
 

@@ -4,6 +4,8 @@ set from = "scott@brightfunds.org"
 color status cyan default
 unset record
 
+subscribe engineering@brightfunds.org remote@brightfunds.org team@brightfunds.org
+
 macro index,pager "#" "<save-message>+brightfunds/trash<enter>" \
     "move message to the trash"
 
