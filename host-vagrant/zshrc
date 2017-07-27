@@ -59,7 +59,7 @@ alias gi=git
 export WORDCHARS=''
 zstyle ':completion:*:*:*:*' menu search
 
-[[ -f /usr/bin/keychain ]] && eval `keychain --eval`
+# [[ -f /usr/bin/keychain ]] && eval `keychain --eval`
 
 unset RUBYOPT
 [[ $EMACS = t ]] && unsetopt zle
@@ -69,7 +69,7 @@ export DEPLOY=staging
 export RUBY_GC_MALLOC_LIMIT=60000000
 export PGHOST=localhost
 export PGUSER=vagrant
-
+export DISPLAY=:0
 PATH=$HOME/bin:$HOME/.cask/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 unset RUBY_FREE_MIN

@@ -42,3 +42,7 @@ tag.sh
 vendor/ruby
 playbook.retry
 ubuntu-xenial-16.04-cloudimg-console.log
+GPATH
+GRTAGS
+GTAGS
+gtags.conf
