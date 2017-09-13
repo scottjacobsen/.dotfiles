@@ -16,6 +16,7 @@ set pager_index_lines = 10
 lists ^clean-code-discussion@googlegroups.com$|^emacs-devel-request@gnu.org$
 subscribe ^clean-code-discussion@googlegroups.com$|^emacs-devel-request@gnu.org$
 
+set index_format = "%4C %Z %?X?A&-? %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
 set editor = "emacsclient -t"
 set sort = 'threads'
 # set sort_aux = 'reverse-last-date-received'

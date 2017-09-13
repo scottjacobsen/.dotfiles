@@ -19,7 +19,6 @@ labelsheader = X-Keywords
 maxconnections = 3
 autorefresh = 10
 quick = 5
-status_backend = sqlite
 
 [Repository local-scottericjacobsen]
 type = GmailMaildir
@@ -45,7 +44,6 @@ maxconnections = 3
 labelsheader = X-Keywords
 autorefresh = 10
 quick = 5
-status_backend = sqlite
 
 [Repository local-neighborland]
 type = GmailMaildir
@@ -71,7 +69,6 @@ maxconnections = 3
 labelsheader = X-Keywords
 autorefresh = 10
 quick = 5
-status_backend = sqlite
 
 [Repository local-brightfunds]
 type = GmailMaildir

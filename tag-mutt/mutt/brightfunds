@@ -1,6 +1,7 @@
 # -*- mode: conf; -*-
 set postponed = "+brightfunds/drafts"
 set from = "scott@brightfunds.org"
+set signature = "~/.mutt/brightfunds-signature"
 color status cyan default
 unset record
 
