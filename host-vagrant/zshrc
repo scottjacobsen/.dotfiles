@@ -69,7 +69,6 @@ export DEPLOY=staging
 export RUBY_GC_MALLOC_LIMIT=60000000
 export PGHOST=localhost
 export PGUSER=vagrant
-export DISPLAY=:0
 PATH=$HOME/bin:$HOME/.cask/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 unset RUBY_FREE_MIN
@@ -85,3 +84,8 @@ export GPG_TTY
 
 export SPRING_TMP_PATH=/tmp
 REPORTTIME=2
+
+
+if test "$SSH_AUTH_SOCK" ; then
+  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+fi
