@@ -46,3 +46,4 @@ GPATH
 GRTAGS
 GTAGS
 gtags.conf
+.rake_tasks

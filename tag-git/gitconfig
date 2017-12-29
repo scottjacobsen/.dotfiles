@@ -35,3 +35,9 @@
 	autosquash = true
 [pull]
 	rebase = true
+[magit]
+	hideCampaign = true
+[rerere]
+	enabled = true
+[github]
+	user = scottjacobsen
