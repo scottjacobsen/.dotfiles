@@ -1,91 +1,131 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-unsetopt beep
-bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.zshrc"
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-autoload -Uz compinit
-autoload -Uz zcalc
-autoload -Uz tetris
-autoload -Uz zargs
-compinit
-# End of lines added by compinstall
-autoload colors
+# Path to your oh-my-zsh installation.
+  export ZSH=/home/vagrant/.oh-my-zsh
 
-colors
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="spaceship"
 
-if [[ $USER == 'root' ]]; then
-    PS1="%{${fg[red]}%}%n@%m %~%#%{${fg[default]}%} "
-    RPS1="%{${fg[red]}%}%W %T%{${fg[default]}%}"
-else
-    PS1="%{${fg[yellow]}%}%n@%m %~%#%{${fg[default]}%} "
-    RPS1="%{${fg[blue]}%}%W %T%{${fg[default]}%}"
-fi
+# Set list of themes to load
+# Setting this variable when ZSH_THEME="spaceship"
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-setopt prompt_subst
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' actionformats \
-    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-zstyle ':vcs_info:*' formats       \
-    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-zstyle ':vcs_info:*' enable git hg
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-# or use pre_cmd, see man zshcontrib
-vcs_info_wrapper() {
-  vcs_info
-  if [ -n "$vcs_info_msg_0_" ]; then
-    echo "%{$fg[grey]%}${vcs_info_msg_0_}%{$reset_color%}$del"
-  fi
-}
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-RPROMPT=$'$(vcs_info_wrapper)'
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-unsetopt bg_nice hup notify hist_beep check_jobs
-setopt inc_append_history share_history extended_history hist_ignore_dups auto_cd cd_able_vars correct auto_menu auto_pushd long_list_jobs extendedglob
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    bundler
+    chruby
+    colored-man-pages
+    git
+    heroku
+    rails
+    ssh-agent
+    zsh-autosuggestions
+    zsh-completions
+    zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ec=emacsclient
-alias grep="grep --color"
-alias -s rb="emacsclient -n"
-alias bc="bundle check || bundle"
-
 alias gi=git
-
-export WORDCHARS=''
-zstyle ':completion:*:*:*:*' menu search
-
-# [[ -f /usr/bin/keychain ]] && eval `keychain --eval`
-
-unset RUBYOPT
-[[ $EMACS = t ]] && unsetopt zle
-export EDITOR="emacsclient"
 export ALTERNATE_EDITOR=""
-export DEPLOY=staging
-export RUBY_GC_MALLOC_LIMIT=60000000
-export PGHOST=localhost
-export PGUSER=vagrant
-PATH=$HOME/bin:$HOME/.cask/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export EDITOR="emacsclient"
 
-unset RUBY_FREE_MIN
+PATH=$HOME/bin:$HOME/.cask/bin:/usr/local/bin:/usr/local/sbin:$PATH:/opt/bin
 
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+SPACESHIP_PROMPT_ORDER=(
+    time          # Time stampts section
+    user          # Username section
+    host          # Hostname section
+    dir           # Current directory section
+    git           # Git section (git_branch + git_status)
+    hg            # Mercurial section (hg_branch  + hg_status)
+    ruby          # Ruby section
+    exec_time     # Execution time
+    line_sep      # Line break
+    battery       # Battery level and status
+    jobs          # Backgound jobs indicator
+    exit_code     # Exit code section
+    char          # Prompt character
+)
+export SPACESHIP_HOST_PREFIX='@'
+export SPACESHIP_DIR_PREFIX=''
+export SPACESHIP_GIT_PREFIX=''
 
-compdef -d rake
-export PATH=$PATH:`npm bin`
-
-GPG_TTY=`tty`
-export GPG_TTY
-
-export SPRING_TMP_PATH=/tmp
-REPORTTIME=2
-
-
-if test "$SSH_AUTH_SOCK" ; then
-  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
-fi
+autoload -U compinit && compinit
