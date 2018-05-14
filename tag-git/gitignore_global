@@ -18,7 +18,7 @@
 .idea
 .jshintrc
 .loadpath
-.nfs.*
+.nfs*
 .passenger
 .powenv
 .project
@@ -47,3 +47,6 @@ GRTAGS
 GTAGS
 gtags.conf
 .rake_tasks
+development.sqlite3
+test.sqlite3
+**/spec/examples.txt
