@@ -11,6 +11,4 @@ macro index,pager "#" "<save-message>+scottericjacobsen/trash<enter>" \
 macro index,pager S "<save-message>+scottericjacobsen/spam<enter>"  \
         "mark message as spam"
 
-macro index "<esc><tab>" "<change-folder>+neighborland/inbox<enter>" "To neighborland"
-
 subscribe rubyonrails-talk@googlegroups.com
