@@ -50,3 +50,6 @@ gtags.conf
 development.sqlite3
 test.sqlite3
 **/spec/examples.txt
+.vscode
+.solargraph.yml
+TODO.org

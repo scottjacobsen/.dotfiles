@@ -6,8 +6,7 @@
 accounts = scottericjacobsen, brightfunds
 socktimeout = 60
 fsync = false
-maxsyncaccounts = 3
-maxage = 3
+maxsyncaccounts = 1
 pythonfile = ~/.offlineimap.py
 
 ############## Personal ################
@@ -16,9 +15,6 @@ localrepository = local-scottericjacobsen
 remoterepository = remote-scottericjacobsen
 synclabels = yes
 labelsheader = X-Keywords
-maxconnections = 3
-autorefresh = 10
-quick = 5
 
 [Repository local-scottericjacobsen]
 type = GmailMaildir
@@ -30,20 +26,17 @@ type = Gmail
 remoteuser = scottericjacobsen@gmail.com
 remotepasseval = mailpasswd("scottericjacobsen.gmail.com.gpg")
 sslcacertfile = /usr/local/etc/openssl/cert.pem
-maxconnections = 3
 folderfilter = folder_filter
 nametrans = nametrans_remote
 auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
+sslcacertfile = /usr/local/etc/openssl/certs/avast.pem
 
 ######### BRIGHTFUNDS ####################
 [Account brightfunds]
 localrepository = local-brightfunds
 remoterepository = remote-brightfunds
 synclabels = yes
-maxconnections = 3
 labelsheader = X-Keywords
-autorefresh = 10
-quick = 5
 
 [Repository local-brightfunds]
 type = GmailMaildir
@@ -55,10 +48,10 @@ type = Gmail
 remoteuser = scott@brightfunds.org
 remotepasseval = mailpasswd("scott.brightfunds.org.gpg")
 sslcacertfile = /usr/local/etc/openssl/cert.pem
-maxconnections = 3
 folderfilter = folder_filter
 nametrans = nametrans_remote
 auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
+sslcacertfile = /usr/local/etc/openssl/certs/avast.pem
 
 [mbnames]
 enabled = yes

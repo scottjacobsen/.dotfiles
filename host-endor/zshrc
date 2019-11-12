@@ -124,7 +124,7 @@ PATH=$HOME/bin:$HOME/.cask/bin:/usr/local/bin:/usr/local/sbin:$PATH:/opt/bin
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby 2.4.2
+chruby 2.6.3
 
 GPG_TTY=`tty`
 export GPG_TTY
@@ -151,6 +151,7 @@ export SPACESHIP_HOST_PREFIX='@'
 export SPACESHIP_DIR_PREFIX=''
 export SPACESHIP_GIT_PREFIX=''
 export DISABLE_AUTO_TITLE=true
+export SPACESHIP_GIT_STATUS_SHOW=false
 bindkey '^ ' autosuggest-accept
 
 autoload -U compinit && compinit
@@ -159,3 +160,9 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+export SKIP_INTEGRITY_CHECK=1
+chruby 2.6.3
