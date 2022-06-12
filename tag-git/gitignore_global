@@ -28,7 +28,6 @@
 .vagrant/
 .~lock.*#
 /log
-/tmp
 TAGS
 \#*
 \#*\#
@@ -53,3 +52,12 @@ test.sqlite3
 .vscode
 .solargraph.yml
 TODO.org
+forge-database.sqlite
+Procfile.scott
+.yardoc
+solargraph_rails.rb
+.ruby-version
+Procfile.adp
+adp_*.pem
+.env
+bin/sup

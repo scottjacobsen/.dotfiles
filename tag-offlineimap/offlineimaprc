@@ -3,7 +3,7 @@
 # get started fast.
 
 [general]
-accounts = scottericjacobsen, brightfunds
+accounts = scottericjacobsen, brightfunds, wizehive
 socktimeout = 60
 fsync = false
 maxsyncaccounts = 1
@@ -15,6 +15,8 @@ localrepository = local-scottericjacobsen
 remoterepository = remote-scottericjacobsen
 synclabels = yes
 labelsheader = X-Keywords
+# autorefresh = 5
+# quick = 10
 
 [Repository local-scottericjacobsen]
 type = GmailMaildir
@@ -24,12 +26,12 @@ nametrans = nametrans_local
 [Repository remote-scottericjacobsen]
 type = Gmail
 remoteuser = scottericjacobsen@gmail.com
-remotepasseval = mailpasswd("scottericjacobsen.gmail.com.gpg")
+remotepasseval = mailpasswd("email/scottericjacobsen/offlineimap")
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 folderfilter = folder_filter
 nametrans = nametrans_remote
 auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
-sslcacertfile = /usr/local/etc/openssl/certs/avast.pem
+# sslcacertfile = /usr/local/etc/openssl/certs/avast.pem
 
 ######### BRIGHTFUNDS ####################
 [Account brightfunds]
@@ -37,6 +39,8 @@ localrepository = local-brightfunds
 remoterepository = remote-brightfunds
 synclabels = yes
 labelsheader = X-Keywords
+# autorefresh = 5
+# quick = 10
 
 [Repository local-brightfunds]
 type = GmailMaildir
@@ -46,17 +50,34 @@ nametrans = nametrans_local
 [Repository remote-brightfunds]
 type = Gmail
 remoteuser = scott@brightfunds.org
-remotepasseval = mailpasswd("scott.brightfunds.org.gpg")
+remotepasseval = mailpasswd("email/scott@brightfunds.org/offlineimap")
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 folderfilter = folder_filter
 nametrans = nametrans_remote
 auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
-sslcacertfile = /usr/local/etc/openssl/certs/avast.pem
+# sslcacertfile = /usr/local/etc/openssl/certs/avast.pem
 
-[mbnames]
-enabled = yes
-filename = ~/.mutt/muttrc.mailboxes
-header = "mailboxes "
-peritem = "+%(accountname)s/%(foldername)s"
-sep = " "
-footer = "\n"
+
+######### WIZEHIVE ####################
+[Account wizehive]
+localrepository = local-wizehive
+remoterepository = remote-wizehive
+synclabels = yes
+labelsheader = X-Keywords
+# autorefresh = 5
+# quick = 10
+
+[Repository local-wizehive]
+type = GmailMaildir
+localfolders = ~/Maildir/wizehive
+nametrans = nametrans_local
+
+[Repository remote-wizehive]
+type = Gmail
+remoteuser = scott.jacobsen@wizehive.com
+remotepasseval = mailpasswd("email/scott.jacobsen@wizehive.com/offlineimap")
+sslcacertfile = /usr/local/etc/openssl/cert.pem
+folderfilter = folder_filter
+nametrans = nametrans_remote
+auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
+# sslcacertfile = /usr/local/etc/openssl/certs/avast.pem
